@@ -1,4 +1,8 @@
-const search = document.getElementById('search-books');
-const bookList = document.getElementById('book-list');
+const banner = document.querySelector('#page-banner');
 
-console.log(search, bookList);
+console.log('#page-banner node type is:', banner.nodeType);
+console.log('#page-banner node name is:', banner.nodeName);
+console.log('#page-banner has a child nodes:', banner.hasChildNodes());
+
+const clonedBanner = banner.cloneNode(true);
+console.log(clonedBanner);
