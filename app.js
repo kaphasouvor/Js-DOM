@@ -1,4 +1,5 @@
 const list = document.querySelector('#book-list ul');
+const forms = document.forms;
 
 // delete books
 list.addEventListener('click', (e) => {
@@ -19,6 +20,16 @@ addForm.addEventListener('submit', function(e){
 const li = document.createElement('li');
 const bookName = document.createElement('span');
 const deleteBtn = document.createElement('span');
+
+// add text content
+deleteBtn.textContents = 'delete';
+bookName.textContent = value;
+
+
+// add classes
+bookName.classList.add('name');
+deleteBtn.classList.add('delete');
+
 
 // append to document
 li.appendChild(bookName);
